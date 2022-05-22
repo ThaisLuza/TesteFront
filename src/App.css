@@ -13,13 +13,13 @@
 }
 
 .aside img {
-  padding: 30px 120px 30px 30px ;
+  padding: 30px 120px 30px 30px;
 }
 
 .aside p {
   color: #00ad8c;
   border-left: #00ad8c 5px solid;
-  padding: 10px 0 10px 40px ;
+  padding: 10px 0 10px 40px;
   font-weight: bold;
 }
 
@@ -48,6 +48,42 @@ hr {
   color: #dfe2eb;
 }
 
-.icon{
+.icon {
   padding-right: 15px;
+}
+
+table td {
+  color: #4d5566;
+  padding: 15px 40px 15px 40px;
+  border-top: 1px solid #dfe2eb;
+  border-bottom: 1px solid #dfe2eb;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.stats {
+  color: #00ad8c;
+}
+
+.first {
+  border-left: 1px solid #dfe2eb;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.last {
+  border-right: 1px solid #dfe2eb;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+button {
+  border-radius: 20px;
+  color: #4d5566;
+  padding: 8px 20px;
+  background-color: #ffffff;
+  border-style: solid;
 }

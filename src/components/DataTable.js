@@ -13,6 +13,7 @@ function DataTable() {
     'Recebida e confirmada',
     'Pagamento Autorizado',
   ];
+  // const Date = new Date()
 
   const getData = async () => {
     const res = await fetch('http://localhost:3001/rota');
@@ -40,14 +41,23 @@ function DataTable() {
       <tbody>
         {data &&
           data.map((item, key) => (
-            <tr key={key}>
-              <td>{item.nNf}</td>
+            <tr key={key} className='btb'>
+              <td className='first'>{item.nNf}</td>
               <td>{item.buyerId}</td>
               <td>{item.providerId}</td>
-              <td>{item.emissionDate}</td>
-              <td>{item.value}</td>
-              <td>{status[item.orderStatusBuyer]}</td>
               <td>
+                {item.emissionDate.split('-')[2].slice(0, 2)}/
+                {item.emissionDate.split('-')[1]}/
+                {item.emissionDate.split('-')[0]}
+              </td>
+              <td className="stats">
+                {Intl.NumberFormat('pt-br', {
+                  style: 'currency',
+                  currency: 'BRL',
+                }).format(item.value)}
+              </td>
+              <td className="stats">{status[item.orderStatusBuyer].toUpperCase()}</td>
+              <td className='last'>
                 <button>Dados do cedente</button>
               </td>
             </tr>
